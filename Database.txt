@@ -1,0 +1,25 @@
+CREATE TABLE userinfo(
+    userid int NOT NULL AUTO_INCREMENT,
+    username varchar(30),
+    email varchar(30),
+	password varchar(30),
+	gender varchar(10),
+	user_photo  varchar(200) DEFAULT 'profile',
+	address varchar(100),
+	profession varchar(60),
+	college varchar(100),
+	religion varchar(20),
+	relationship varchar(30),
+	verify int,
+    PRIMARY KEY(userid)
+    
+);
+
+CREATE TABLE post (
+    post_id int NOT NULL AUTO_INCREMENT,
+    user_id int NOT NULL,
+    text text,
+	photo varchar(200),
+    PRIMARY KEY (post_id),
+    FOREIGN KEY (user_id) REFERENCES userinfo(user_id)
+);
