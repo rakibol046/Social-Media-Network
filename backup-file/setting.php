@@ -6,46 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../style/nav_style.css">
-    <link rel="stylesheet" href="../style/setting-style.css">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-      * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-body{
-    background-color:  #132429fa;
-    color: white;
-}
+      body {
+        background-color: lightslategray;
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw; */
+      }
 
-    #main-content{
-      background-color:  #132429fa;
-      padding: 60px 0px 0px 0px;
-      height: auto;
-      width: 100%;
-      /* display: block;
-      overflow: hidden; */
+      .left-col {
+        background-color: rgb(60, 64, 67);
+        padding: 20px;
+        height: 100vh;
+      }
 
-  }
-  @media (max-width: 991px){
-    #main-content{
-      padding: 60px 0px 60px 0px;
+      .left-col p {
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      .left-col p:hover {
+        background-color: rgb(58, 59, 60);
+        border: 1px solid white;
+        border-radius: 5px;
+      }
+
+      .left-col p i {
+        padding-right: 10px;
+      }
+
+      .right-col {
+        background-color: #132429fa;
+      }
+      /* .general-setting{
+          display: none;
+      } */
+      .security-setting{
+          display: none;
+      }
+      .security-setting .input-field{
+          width: 50%;
+          margin: auto;
+      }
+      /* .security-form{
+          width: 50%;
+      } */
+      .hide{
+          display: none;
+      }
+      .show{
+          display: block;
+      }
+
+      @media (max-width: 991px){
+        /* body {
+        height: auto;
+        width: 100%;
+      } */
+      .left-col{
+          display: none;
+      }
+      .general-setting{
+          border: 1px solid white;
+      }
+      .security-setting{
+          display: block;
+          border: 1px solid white;
+          margin-top: 100px;
+      }
+      .security-form{
+          width: 100%;
+      }
+      
+        
     }
-  }
     </style>
   </head>
   <body>
-    
-  <?php
-    require("nav.php");
-   ?>
-
-
-      <div class="" id="main-content">
-      <div class="row w-100">
+    <div class="container-fluid">
+      <div class="row">
         <div class="col-lg-3 col-sm-12 left-col">
           <h1>Settings</h1>
           <p id="general-btn">
@@ -53,8 +99,7 @@ body{
           <p id="security-btn">
             <i class="fas fa-shield-alt"></i>Security </p>
         </div>
-        <div class="col-lg-3"></div>
-        <div class="col-lg-8 col-sm-12 right-col">
+        <div class="col-lg-9 col-sm-12 right-col">
             <div class="general-setting">
                 <div class="form" id="">
                 <form action="#" method="post" class="p-4">
@@ -141,15 +186,14 @@ body{
                 <br>
                 <hr>
                 <a href="registration.php" type="button" class="btn mt-2 text-center w-25 float-end bg-white " id="create-btn">Save</a>
-                <br>
                 </form>
 
             </div>
         </div>
       </div>
+    </div>
 
-      </div>
-    
+
     <script>
         $(document).ready(function() {
           $("#security-btn").click(function() {
@@ -163,6 +207,8 @@ body{
           });
         });
       </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

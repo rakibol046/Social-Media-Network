@@ -70,14 +70,14 @@
       <div class="row">
         <div class="col-lg-6 col-sm-12 " id="content">
           <h1 class="text-primary bg-white text-center shadow-sm p-1 mb-2 bg-body rounded" id="title">CONNECTOR</h1>
-          <h2 class="text-center">
+          <h2 class="text-center text-white">
             <i> Connector </i> helps you connect and share with the people in your life
           </h2>
         </div>
         <div class="col-lg-6 col-sm-12">
           <div class="login-form shadow-sm p-1 mb-5 bg-body rounded" id="">
             <form action="log_action.php" method="post" class="p-4">
-              <h2 class="text-center">Log in</h2>
+              <h2 class="text-center text-white">Log in</h2>
               <div class="form-group pt-1">
                 <input type="text" class="form-control" name="email" placeholder="Email" required="required">
               </div>
@@ -87,7 +87,7 @@
               <div class="form-group pt-3">
                 <input type="submit" class="btn btn-primary w-100" name="submit" value="Log In">
               </div>
-              <div class="clearfix pt-3">
+              <div class="clearfix pt-3 text-white">
                 <label class="float-start form-check-label">
                   <input type="checkbox"> Remember me </label>
                 <a href="#" class="float-end text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Forgot Password?</a>

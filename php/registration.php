@@ -104,15 +104,15 @@ error_reporting(0);
       <div class="row">
         <div class="col-lg-6 col-sm-12 " id="content">
           <h1 class="text-primary bg-white text-center shadow-sm p-1 mb-2 bg-body rounded">CONNECTOR</h1>
-          <h2 class="text-center">
+          <h2 class="text-center text-white">
             <i> Connector </i> helps you connect and share with the people in your life
           </h2>
         </div>
         <div class="col-lg-6 col-sm-12">
           <div class="signup-form shadow-sm p-1 mb-5 bg-body rounded">
             <form action="" method="post" class="p-4">
-              <h2 class="text-center">Register</h2>
-              <p class="hint-text text-center">Create your account. </p>
+              <h2 class="text-center text-white">Register</h2>
+              <p class="hint-text text-center text-white">Create your account. </p>
               <p class="hint-text text-center" style="color: red;"> <?php echo $message ;?> </p>
               <div class="form-group pt-3">
               <input type="text" class="form-control" name="username" placeholder="Full Name" required="required">
@@ -128,24 +128,24 @@ error_reporting(0);
               </div>
 
 
-              <strong class="d-block pt-3 pb-1" >Gender ? </strong>
+              <strong class="d-block pt-3 pb-1 text-white" >Gender ? </strong>
               
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline text-white">
                   <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male">
                   <label class="form-check-label" for="inlineRadio1">Male</label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div class="form-check form-check-inline text-white">
                   <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female">
                   <label class="form-check-label" for="inlineRadio2">Female</label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div class="form-check form-check-inline text-white">
                   <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Other">
                   <label class="form-check-label" for="inlineRadio2">Other</label>
                 </div>
 
 
 
-              <div class="form-group pt-3">
+              <div class="form-group pt-3 text-white">
                 <label class="form-check-label">
                   <input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a>
                 </label>
