@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
       body {
-        background-color: lightslategray;
+        background-image: url("https://images.unsplash.com/photo-1554177255-61502b352de3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
         display: flex;
         align-items: center;
         justify-content: center;
@@ -42,6 +42,23 @@
         margin: auto;
         padding: 20px;
       }
+      #content h1{
+        text-shadow:7px 6px 5px #e90606;
+        box-shadow: 5px 10px 5px #2d0101;
+        border: 5px solid lightblue;
+        background: rgba(0, 0, 0, 0.5);
+        /* border-radius: 0px 50% 0px 50%; */
+      }
+      #content h2{
+        text-shadow: -8px 5px 5px red;
+      }
+      form{
+        box-shadow: 0px 30px 129px 0 #8d0000;;
+        background-color: white;
+        border: 5px solid white;
+        background: rgba(0, 0, 0, 0.5);
+
+      }
 
       @media (max-width: 580px) {
         body {
@@ -69,13 +86,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-sm-12 " id="content">
-          <h1 class="text-primary bg-white text-center shadow-sm p-1 mb-2 bg-body rounded" id="title">CONNECTOR</h1>
+          <h1 class="text-primary text-center " id="title">CONNECTOR</h1>
           <h2 class="text-center text-white">
             <i> Connector </i> helps you connect and share with the people in your life
           </h2>
         </div>
         <div class="col-lg-6 col-sm-12">
-          <div class="login-form shadow-sm p-1 mb-5 bg-body rounded" id="">
+          <div class="login-form" id="">
             <form action="log_action.php" method="post" class="p-4">
               <h2 class="text-center text-white">Log in</h2>
               <div class="form-group pt-1">

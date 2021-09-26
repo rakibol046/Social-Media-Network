@@ -62,7 +62,11 @@ error_reporting(0);
     <title>Document</title>
     <style>
       body {
-        background-color: lightslategray;
+        /* background-image: url("../photo/bg.jpg"); */
+        background-image: url("https://images.unsplash.com/photo-1554177255-61502b352de3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        background-color: white;
+        /* background-size: cover;
+         background-repeat: no-repeat; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -73,6 +77,16 @@ error_reporting(0);
         margin: auto;
         padding: 20px;
       }
+      #content h1{
+        text-shadow:7px 6px 5px #e90606;
+        box-shadow: 5px 10px 5px #2d0101;
+        border: 5px solid lightblue;
+        background: rgba(0, 0, 0, 0.5);
+        /* border-radius: 0px 50% 0px 50%; */
+      }
+      #content h2{
+        text-shadow: -8px 5px 5px red;
+      }
 
       .signup-form {
         width: 400px;
@@ -80,8 +94,16 @@ error_reporting(0);
         font-size: 15px;
       }
 
-      form {
+      /* form {
         background-color: rgb(75 93 111);
+      } */
+      #form{
+        box-shadow: 0px 30px 229px 0 #8d0000;;
+        background-color: white;
+        border: 5px solid white;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: ;
+
       }
 
 
@@ -103,14 +125,14 @@ error_reporting(0);
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-sm-12 " id="content">
-          <h1 class="text-primary bg-white text-center shadow-sm p-1 mb-2 bg-body rounded">CONNECTOR</h1>
+          <h1 class="text-primary  text-center" >CONNECTOR</h1>
           <h2 class="text-center text-white">
             <i> Connector </i> helps you connect and share with the people in your life
           </h2>
         </div>
         <div class="col-lg-6 col-sm-12">
-          <div class="signup-form shadow-sm p-1 mb-5 bg-body rounded">
-            <form action="" method="post" class="p-4">
+          <div class="signup-form " id="form">
+            <form action="" method="post" class="p-4 ">
               <h2 class="text-center text-white">Register</h2>
               <p class="hint-text text-center text-white">Create your account. </p>
               <p class="hint-text text-center" style="color: red;"> <?php echo $message ;?> </p>
@@ -154,7 +176,7 @@ error_reporting(0);
                 <button type="submit" name="registration" class="btn btn-success btn-lg w-100">Register Now</button>
               </div>
             </form>
-            <div class="text-center text-black">Already have an account? <a href="index.php">Sign in</a>
+            <div class="text-center text-white mb-3">Already have an account? <a href="index.php">Sign in</a>
             </div>
           </div>
         </div>
