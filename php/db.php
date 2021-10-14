@@ -1,4 +1,4 @@
 <?php
-$db = mysqli_connect("localhost","root", "", "social");
+$db = mysqli_connect("localhost","root", "", "social_media");
 
 ?>

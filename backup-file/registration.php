@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
     require "db.php";
 	$message="";
     if(isset($_POST['registration'])) {
@@ -62,10 +62,11 @@
     <title>Document</title>
     <style>
       body {
-        background-image: url("../photo/cover.png") ;
-        background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: cover;
+        /* background-image: url("../photo/bg.jpg"); */
+        background-image: url("https://images.unsplash.com/photo-1554177255-61502b352de3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        background-color: white;
+        /* background-size: cover;
+         background-repeat: no-repeat; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -77,9 +78,11 @@
         padding: 20px;
       }
       #content h1{
-        font-size: 3rem;
-        font-weight: bold;
-        letter-spacing: 30px
+        text-shadow:7px 6px 5px #e90606;
+        box-shadow: 5px 10px 5px #2d0101;
+        border: 5px solid lightblue;
+        background: rgba(0, 0, 0, 0.5);
+        /* border-radius: 0px 50% 0px 50%; */
       }
       #content h2{
         text-shadow: -8px 5px 5px red;
@@ -91,62 +94,17 @@
         font-size: 15px;
       }
 
-    
-
       /* form {
         background-color: rgb(75 93 111);
       } */
-      form{
+      #form{
+        box-shadow: 0px 30px 229px 0 #8d0000;;
         background-color: white;
+        border: 5px solid white;
         background: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        position: relative;
+        border-radius: ;
 
       }
-
-      
-    .signup-form form img{
-        position: absolute;
-        top: -50px;
-        left: calc(50% - 50px);
-        width: 100px;
-        background: rgba(255,255,255, 0.8);
-        border-radius: 50%;
-      }
-
-      .signup-form form .custom-form {
-        width: 100%;
-  padding: 10px 0;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  /* margin-bottom: 30px; */
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background-color: transparent;
-  color: white;
-        }
-        .signup-form form #input-field{
-          position: relative;
-        }
-        .signup-form form #input-field label{
-          position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 1rem;
-  pointer-events: none;
-  transition: .3s ease-out;
-  color: white;
-
-        }
-
-        .signup-form #input-field  input:focus + label,
-        .signup-form #input-field  input:valid + label {
-              transform: translateY(-18px);
-              color: #ff652f;
-              font-size: .8rem;
-            }
 
 
       @media (max-width: 580px){
@@ -167,33 +125,28 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-sm-12 " id="content">
-        <h1 class="text-white text-center " id="title"> <pre>SOCIAL<br>  BOOK</pre></h1>
+          <h1 class="text-primary  text-center" >CONNECTOR</h1>
           <h2 class="text-center text-white">
-            <i> S H A R E  Y O U R  L I F E </i>
+            <i> Connector </i> helps you connect and share with the people in your life
           </h2>
         </div>
         <div class="col-lg-6 col-sm-12">
           <div class="signup-form " id="form">
             <form action="" method="post" class="p-4 ">
-              <img class="" src="../photo/avatar.png" alt="">
-              <h2 class="text-center  mt-5" style="color: orange" >Register</h2>
+              <h2 class="text-center text-white">Register</h2>
               <p class="hint-text text-center text-white">Create your account. </p>
               <p class="hint-text text-center" style="color: red;"> <?php echo $message ;?> </p>
-              <div class="form-group pt-1 mb-3"  id="input-field">
-              <input type="text" class="custom-form" name="username" placeholder="" required="required">
-              <label for="name">Full Name</label>
+              <div class="form-group pt-3">
+              <input type="text" class="form-control" name="username" placeholder="Full Name" required="required">
               </div>
-              <div class="form-group pt-1 mb-3"  id="input-field">
-                <input type="email" class="custom-form" name="email" placeholder="" required="required">
-                <label for="email">Email</label>
+              <div class="form-group pt-3">
+                <input type="email" class="form-control" name="email" placeholder="Email" required="required">
               </div>
-              <div class="form-group pt-1 mb-3"  id="input-field">
-                <input type="password" class="custom-form" name="password" placeholder="" required="required">
-                <label for="Password">Password</label>
+              <div class="form-group pt-3">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
               </div>
-              <div class="form-group pt-1 mb-3"  id="input-field">
-                <input type="password" class="custom-form" name="confirm_password" placeholder="" required="required">
-                <label for="Password">Confirm Password</label>
+              <div class="form-group pt-3">
+                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
               </div>
 
 
@@ -223,7 +176,7 @@
                 <button type="submit" name="registration" class="btn btn-success btn-lg w-100">Register Now</button>
               </div>
             </form>
-            <div class="text-center text-white mb-3">Already have an account? <i> <b> <a href="index.php" style="color: white;  " >Login</a></b></i> 
+            <div class="text-center text-white mb-3">Already have an account? <a href="index.php">Sign in</a>
             </div>
           </div>
         </div>

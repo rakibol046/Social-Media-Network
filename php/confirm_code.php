@@ -1,4 +1,5 @@
 <?php
+// error_reporting(0);
 require "db.php";
 $message="";
 if(isset($_GET['email'])){
@@ -39,7 +40,10 @@ else{
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
     body{
-        background-color: #63738a;
+        background-image: url("../photo/cover.png") ;
+        background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: cover;
         display: flex;
         align-items: center;
         justify-content: center;
