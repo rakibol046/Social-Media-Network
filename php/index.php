@@ -1,9 +1,9 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 require "db.php";
-
+$message="";
 if(isset($_POST['login-submit'])) {
-  $message="";
+
       $email=$_POST["email"];
 
       $password=$_POST["password"];
@@ -46,6 +46,8 @@ if(isset($_POST['login-submit'])) {
     }
        
   }
+
+
 
 ?>
 
@@ -227,15 +229,14 @@ if(isset($_POST['login-submit'])) {
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form>
+              <form method="POST">
                 <div class="mb-3">
-                  <input type="email" class="form-control border border-3" id="femail" require placeholder="your email">
+                  <input type="email" class="form-control border border-3" id="femail" name="forget-email" require placeholder="your email">
                 </div>
+                <button type="submit" class="btn btn-primary w-50 float-end" name="forget_submit" id="forget-btn" data-bs-dismiss="modal">OK</button>
               </form>
             </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary w-100" name="forget_submit" id="forget-btn" data-bs-dismiss="modal">OK</button>
-            </div>
+    
           </div>
         </div>
         <!-- forget password model end-->
@@ -252,8 +253,19 @@ if(isset($_POST['login-submit'])) {
       
       <script>
         $(document).ready(function() {
-          $("#forget-btn").click(function() {
-            $("#mymodel").show();
+          $("#forget-btn").click(function(e) {
+            e.preventDefault();
+            var forgetEmail = $("#femail").val();
+              $.ajax({
+              url: "forget-password.php",
+              type : "POST",
+              data : {femail:forgetEmail},
+              success : function(data){
+                if(data == 1){
+                  $("#mymodel").show();
+                }
+              }
+            });
           });
         });
       </script>

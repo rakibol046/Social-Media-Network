@@ -5,16 +5,20 @@ $message="";
 if(isset($_GET['email'])){
   $email = $_GET['email'];
   if(isset($_POST['submit'])) {
-  $result = mysqli_query($db, "select verify from userinfo where email='$email'");
+  $result = mysqli_query($db, "select verify, user_id from userinfo where email='$email'");
 
   $row = mysqli_fetch_assoc($result);
     $verify = $row["verify"];
+    $userid = $row["user_id"];
   
   
 
      if($_POST['code']==$verify){
         if(mysqli_query($db, "update userinfo set verify=1 where email='$email'")){
-            header("location:home.php");
+
+            session_start();
+            $_SESSION['userid']= $userid;
+            header("location:home2.php");
         }
         
     }
