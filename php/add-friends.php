@@ -39,6 +39,7 @@ session_start();
 		<title>Socialbook</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="../style/home2-style.css">
+        <link rel="stylesheet" href="../style/friends.css">
 
 	</head>
 	<body>
@@ -51,15 +52,63 @@ session_start();
             <div class="col-3 p-3">
             <?php require "left-sidebar.php"; ?>
             </div>
-            <div class="col-6">
-            <?php require "main-content.php"; ?>
+
+            <div class="col-7 friends ">
+                <div class="header">
+                    <h1 class="text-primary m-3">Add Friends</h1>
+                </div>
+                <hr>
+                <div id="data">
+                    <ul class="list-group">
+                    <?php 
+                    require "db.php";
+                        if(isset($_SESSION['userid'])){
+                    
+                            $userId=$_SESSION['userid'];
+                          
+                            $result = mysqli_query($db, "select username, user_photo from userinfo");
+                          
+                            while($row = mysqli_fetch_assoc($result)){
+                                echo "<li class='list-group-item '> 
+                               
+                                <img src='../photo/{$row["user_photo"]}.jpg' alt=' width='50px' height='50px' class='mr-3 float-start'> 
+                                <a href=' class='float-start'>{$row["username"]}</a>
+                                <a href='' class='float-end'>Add as a friend</a>
+                            </li>";
+                           }
+                            
+                            
+                          
+                          
+                          }
+                       
+                            
+                    ?>
+                        
+                    </ul>
+                </div>
             </div>
-            <div class="col-3  p-3">
-            <?php require "right-sidebar.php"; ?>
+            <?php  ?>
             </div>
+            
         </div>
              
 </div>
+<script>
+        $(document).ready(function() {
+            $("#search").on("keyup",function(){
+            var search_term = $(this).val();
+            $.ajax({
+                url: "search-friends.php",
+                type: "POST",
+                data : {search:search_term },
+                success: function(data) {
+                $("#data").html(data);
+                }
+            });
+            });
+        });
+      </script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

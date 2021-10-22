@@ -1,0 +1,27 @@
+.friends{
+    /* background-color: white; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+
+}
+.friends .search{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#data ul li a{
+    font-size: 25px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#data ul li img{
+    border-radius: 10px;
+    border: 2px solid lightblue;
+    height: 50px;
+    width: 50px;
+}

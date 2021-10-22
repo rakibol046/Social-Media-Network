@@ -1,7 +1,7 @@
 
 		<nav>
 			<div class="nav-left"> 
-			<a herf="home2.php">	<img src="../images/logo.png" class="logo"> </a>
+			<a herf="home2.php"><img src="../images/logo.png" class="logo"> </a>
             <!-- <a herf="#"> SOCIAL BOOK</a> -->
 				<ul>
 					<li><img src="../images/notification.png"></li>

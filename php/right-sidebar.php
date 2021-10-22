@@ -35,7 +35,7 @@
 
     <div class="sidebar-title">
         <h4>Active now</h4>
-        <a href="#">Hide Chat</a>
+        <!-- <a href="#">Hide Chat</a> -->
     </div>
 
     <div class="online-list">
