@@ -1,10 +1,10 @@
 CREATE TABLE userinfo(
     user_id int NOT NULL AUTO_INCREMENT,
-    username varchar(30),
+    user_name varchar(30),
     email varchar(30),
 	password varchar(30),
 	gender varchar(10),
-	user_photo  varchar(200) DEFAULT 'profile',
+	user_photo  varchar(200) DEFAULT 'profile.png',
 	address varchar(100),
 	profession varchar(60),
 	college varchar(100),
@@ -18,8 +18,17 @@ CREATE TABLE userinfo(
 CREATE TABLE post (
     post_id int NOT NULL AUTO_INCREMENT,
     user_id int NOT NULL,
-    text text,
-	photo varchar(200),
+    post_text text,
+	post_photo varchar(200),
+	post_date varchar(200),
     PRIMARY KEY (post_id),
     FOREIGN KEY (user_id) REFERENCES userinfo(user_id)
+);
+
+
+CREATE TABLE friends(
+     user_id int NOT NULL,
+	friends_id int NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES userinfo(user_id),
+    FOREIGN KEY (friends_id) REFERENCES userinfo(user_id)
 );

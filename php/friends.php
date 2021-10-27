@@ -71,15 +71,14 @@ session_start();
                 <div id="data">
                     <ul class="list-group">
                     <?php 
-                    require "db.php";
-                        if(isset($_SESSION['userid'])){
+                    
                     
                             $userId=$_SESSION['userid'];
                           
                             $result = mysqli_query($db, "select username, user_photo from userinfo");
                           
                             while($row = mysqli_fetch_assoc($result)){
-                                echo "<li class='list-group-item '> 
+                                echo "<li class='list-group-item'> 
                                
                                 <img src='../photo/{$row["user_photo"]}.jpg' alt=' width='50px' height='50px' class='mr-3 float-start'> 
                                 <a href=' class='float-start'>{$row["username"]}</a>
@@ -87,11 +86,7 @@ session_start();
                             </li>";
                            }
                             
-                            
-                          
-                          
-                          }
-                       
+                              
                             
                     ?>
                         
