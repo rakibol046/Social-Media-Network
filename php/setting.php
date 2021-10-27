@@ -10,6 +10,13 @@ session_start();
       
         $row = mysqli_fetch_assoc($result);
           $userName = $row["username"];
+          $email = $row["email"];
+          $password = $row["password"];
+          $userPhoto = $row["user_photo"];
+          $profession = $row["profession"];
+          $college = $row["college"];
+          $religion = $row["religion"];
+          $address = $row["address"];
         
         
       

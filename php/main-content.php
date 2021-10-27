@@ -1,7 +1,7 @@
 <div class="main-content">
   <div class="write-post-container">
     <div class="user-profile">
-      <img src="../images/profile-pic.png">
+      <img src="../uploads/<?php echo $userPhoto ?>">
       <div>
         <p> <?php echo $userName ?> </p>
         <small>Public</small>

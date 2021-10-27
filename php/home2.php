@@ -10,6 +10,7 @@ session_start();
       
         $row = mysqli_fetch_assoc($result);
           $userName = $row["username"];
+          $userPhoto = $row["user_photo"];
         
         
       

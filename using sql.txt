@@ -10,7 +10,9 @@
 
 
 
-
+"UPDATE userinfo SET username='$name', user_photo='$fileName', address='$address',
+     profession='$profession', college='$college', religion='$religion'
+     WHERE user_id = '$userid'"
 
 
 

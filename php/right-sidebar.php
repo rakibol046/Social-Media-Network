@@ -25,7 +25,7 @@ require "db.php";
             while($row = mysqli_fetch_assoc($result)){
                 echo "<div class='online-list'>
                 <div class='online'>
-                    <img src='../photo/{$row["user_photo"]}.jpg'>
+                    <img src='../uploads/{$row["user_photo"]}'>
                 </div>
                 <p class='m-2'>{$row["username"]}</p>
         

@@ -16,7 +16,7 @@
 				</div>
 
 				<div class="nav-user-icon online" onclick="settingsMenuToggle()">
-					<img src="../images/profile-pic.png">
+					<img src="../uploads/<?php echo $userPhoto ?>">
 
 					
 				</div>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="setting-menu-inner">
                     <div class="user-profile">
-                        <img src="../images/profile-pic.png">
+                        <img src="../uploads/<?php echo $userPhoto ?>">
                         <div>
                             <p><?php echo $userName ?></p>
                             <a href="#">See Your Profile</a>
