@@ -48,7 +48,7 @@
                     <hr>
                     <div class="settings-links">
                         <img src="../images/setting.png" class="settings-icon">
-                        <a href="#">Settings & Privacy <img src="../images/arrow.png" width="10px"></a>
+                        <a href="setting.php">Settings & Privacy <img src="../images/arrow.png" width="10px"></a>
                     </div>
                     <div class="settings-links">
                         <img src="../images/help.png" class="settings-icon">

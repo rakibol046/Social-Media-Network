@@ -190,7 +190,7 @@ if(isset($_POST['login-submit'])) {
         <div class="col-lg-6 col-sm-12">
           <div class="login-form" id="">
             <form action="" method="post" class="p-4">
-              <img class="" src="../photo/avatar.png" alt="">
+              <img class="" src="../photo/profile.png" alt="">
               <h2 class="text-center mt-5" style="color: orange" > Login</h2>
               <p class="hint-text text-center" style="color: red;"> <?php echo $message ;?> </p>
               <div class="form-group pt-1 mb-3"  id="input-field">

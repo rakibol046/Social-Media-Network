@@ -1,0 +1,21 @@
+"INSERT INTO post(user_id, post_text, post_photo, post_date) VALUES ('$userid','$text','$fileName' ,'$date')"
+
+
+
+
+
+
+"SELECT user_id, verify FROM userinfo where email='$email' AND password='$password'"
+
+
+
+
+
+
+
+
+"SELECT post.post_id, post.post_text, post.post_photo, post.post_date, userinfo.username, userinfo.user_photo
+FROM post
+INNER JOIN userinfo
+ON post.user_id=userinfo.user_id
+ORDER BY post.post_id DESC;"

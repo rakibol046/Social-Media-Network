@@ -26,6 +26,7 @@
           // }
     $userid = $_SESSION['userid'];
     // $time = date('h:i', time());
+    date_default_timezone_set("Asia/Dhaka");
     $date = date('M d Y', time()).", ".date('h:i A', time()) ;
     // $text = "hello";
     // $photo = "profile";

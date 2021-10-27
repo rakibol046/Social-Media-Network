@@ -175,7 +175,7 @@
         <div class="col-lg-6 col-sm-12">
           <div class="signup-form " id="form">
             <form action="" method="post" class="p-4 ">
-              <img class="" src="../photo/avatar.png" alt="">
+              <img class="" src="../photo/profile.png" alt="">
               <h2 class="text-center  mt-5" style="color: orange" >Register</h2>
               <p class="hint-text text-center text-white">Create your account. </p>
               <p class="hint-text text-center" style="color: red;"> <?php echo $message ;?> </p>

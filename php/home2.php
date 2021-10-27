@@ -42,6 +42,14 @@ session_start();
         </div>
       </div>
       <script>
+        //  var photoShow = $("#show-post-photo").files.item(0).name;
+        //   alert("photoShow");
+        //   if(photoShow=="../uploads/"){
+        //     $("#show-post-photo").style.display="none";
+        //   }
+
+
+
         const photo = document.querySelector("#photo");
 
         function fun() {
@@ -91,6 +99,7 @@ session_start();
       </script>
       <script>
         $(document).ready(function() {
+
           $("#clearImgBtn").click(function(e) {
             // alert("Data inserted");
             e.preventDefault();
@@ -114,6 +123,7 @@ session_start();
             //   }
             // });
           });
+
         });
       </script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
