@@ -34,7 +34,7 @@
                         <img src="../uploads/<?php echo $userPhoto ?>">
                         <div>
                             <p><?php echo $userName ?></p>
-                            <a href="#">See Your Profile</a>
+                            <a href="profile-page.php">See Your Profile</a>
                         </div>
                     </div>
                     <hr>

@@ -10,7 +10,7 @@
   </div>
   <div class="post-input-container">
    <form method="post" action="post.php" enctype="multipart/form-data">
-   <textarea rows="3" placeholder="What's on your mind, John?" name="text" id="text" onkeyup="isEmpty()"></textarea>
+   <textarea rows="3" placeholder="What's on your mind, <?php echo $userName ?>?" name="text" id="text" onkeyup="isEmpty()"></textarea>
    <input type="file"  name="file" id="photo" hidden>
    <div class="filearea bg-secondary"  id="imgPreViewArea">
    <button id="clearImgBtn">X</button>
@@ -46,7 +46,7 @@
    echo "<div class='post-container'>
    <div class='post-row'>
      <div class='user-profile'>
-       <img src='../images/profile-pic.png'>
+       <img src='../uploads/{$postData["user_photo"]}'>
        <div>
          <p>{$postData["username"]}</p>
          <span>{$postData["post_date"]}</span>

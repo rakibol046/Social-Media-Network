@@ -79,12 +79,28 @@ session_start();
                             $result = mysqli_query($db, "select username, user_photo from userinfo");
                           
                             while($row = mysqli_fetch_assoc($result)){
-                                echo "<li class='list-group-item'> 
-                               
-                                <img src='../photo/{$row["user_photo"]}.jpg' alt=' width='50px' height='50px' class='mr-3 float-start'> 
-                                <a href=' class='float-start'>{$row["username"]}</a>
-                                <a href='' class='float-end'>Profile</a>
-                            </li>";
+                                echo "<div class='profile-details'>
+                                <div class='pd-left'>
+                                    <div class='pd-row'>
+                                        <img src='../uploads/{$row["user_photo"]}' class='pd-image'>
+                                        <div>
+                                            <h3> {$row["username"]} </a> </h3>
+                                            
+                            
+                                        </div>
+                            
+                                    </div>
+                            
+                                </div>
+                                 <div class='pd-right'>
+                                     
+                                     <button type='button'><img src='../uploads/{$row["user_photo"]}'>Profile</button>
+                                      <button type='button'><img src='message.png'>Message</button>
+                                     
+                            
+                                 </div>
+                            
+                            </div>";
                            }
                             
                               

@@ -39,7 +39,7 @@
     $result = mysqli_query($db, "INSERT INTO post(user_id, post_text, post_photo, post_date) VALUES ('$userid','$text','$fileName' ,'$date')");
 
     if($result==true){
-      header("location:home2.php");
+      header("location:profile-page.php");
     }
     // else{
     //   echo 0;
