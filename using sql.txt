@@ -21,3 +21,11 @@ FROM post
 INNER JOIN userinfo
 ON post.user_id=userinfo.user_id
 ORDER BY post.post_id DESC;"
+
+
+
+$result = mysqli_query($db, "SELECT  userinfo.user_photo,userinfo.username, userinfo.user_id 
+FROM friends
+LEFT JOIN userinfo
+ON friends.friends_id=userinfo.user_id
+ORDER BY RAND();");

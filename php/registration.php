@@ -62,7 +62,7 @@
     <title>Document</title>
     <style>
       body {
-        background-image: url("../photo/cover.png") ;
+        background-image: url("../photo/coverpro.png") ;
         background-repeat: no-repeat;
   background-size: cover;
   background-attachment: cover;

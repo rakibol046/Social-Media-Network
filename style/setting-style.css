@@ -3,10 +3,10 @@
     height: 2px;
     background-color: whitesmoke;
     margin: 30px, 0px, 30px, 0px;
-} */
+}
 
 
-/* .left-col {
+.left-col {
     background-color: rgb(60, 64, 67);
     padding: 20px;
     height: 100vh;
@@ -28,44 +28,44 @@
 
 .left-col p i {
     padding-right: 10px;
-} */
+}
 
 
-/* .right-col {
+.right-col {
     background-color: #132429fa;
-  } */
+  }
 
 
-/* .general-setting{
+.general-setting{
       display: none;
-  } */
+  }
 
 
-/* .security-setting {
+.security-setting {
     display: block;
 }
 
 .security-setting .input-field {
     width: 50%;
     margin: auto;
-} */
+}
 
 
-/* .security-form{
+.security-form{
       width: 50%;
-  } */
+  }
 
 
-/* .hide {
+.hide {
     display: none;
 }
 
 .show {
     display: block;
-} */
+}
 
 
-/* 
+
 @media (max-width: 991px) {
     body {
     height: auto;

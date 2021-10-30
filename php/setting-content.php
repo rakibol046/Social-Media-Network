@@ -13,6 +13,7 @@
                 <form action="profile-update.php" method="post" enctype="multipart/form-data" class="p-4">
                 <h2 class="text-center">General Setting</h2>
                 <hr>
+                <p style="color: green;"><?php echo $message ?></php>
                 <div class="profile-change-area">
                     <img src="../uploads/<?php echo $userPhoto?>" alt="" height="200px" width="200px">
                     <br>
@@ -35,6 +36,7 @@
                     </div>
                     <!-- <div class="form-group pt-3">
                         <label for="">Gender</label>
+
                         <br>
                         <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male">
@@ -77,9 +79,11 @@
 
             <div class="security-setting bg-white my-3">
 
-            <form action="#" method="post" class="p-4 security-form">
+            <form action="password-update.php" method="post" class="p-4 security-form">
                 <h2 class="text-center">Security</h2>
                 <hr>
+                <p style="color: red;"><?php echo $wrong ?></php>
+                <p style="color: green;"><?php echo $updated ?></php>
                      <div class="form-group pt-3 input-field">
                         <label for="">Password</label>
                         <input type="text" class="form-control" name="password" value="">
@@ -88,10 +92,10 @@
                         <label for="">New Password</label>
                         <input type="text" class="form-control" name="newPassword" value="">
                     </div>
-                     <div class="form-group pt-3 input-field">
+                     <!-- <div class="form-group pt-3 input-field">
                         <label for="">Confirm new password</label>
                         <input type="text" class="form-control" name="confirmNewPassword" value="">
-                    </div>
+                    </div> -->
                 <br>
                 <br>
                 <hr>

@@ -45,7 +45,7 @@ session_start();
      <div class="container-fluid">
         <div class="row ">
           
-          <div class="col-12"> <?php require "public-profile-content.php"; ?> </div>
+          <div class="col-12"> <?php require "friends-profile-content.php"; ?> </div>
         </div>
       </div> 
      

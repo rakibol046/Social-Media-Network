@@ -1,7 +1,7 @@
 
 		<nav>
 			<div class="nav-left"> 
-			<a herf="home2.php"><img src="../images/logo.png" class="logo"> </a>
+			<a href="home2.php"><img src="../images/logo.png" class="logo"> </a>
             <!-- <a herf="#"> SOCIAL BOOK</a> -->
 				<ul>
 					<li><img src="../images/notification.png"></li>
@@ -26,9 +26,9 @@
             <!------------------------ setting-menu---------------------->
             <div class="settings-menu">
 
-                <div id="dark-btn">
+                <!-- <div id="dark-btn">
                     <span></span>
-                </div>
+                </div> -->
                 <div class="setting-menu-inner">
                     <div class="user-profile">
                         <img src="../uploads/<?php echo $userPhoto ?>">
@@ -38,26 +38,26 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="user-profile">
+                    <!-- <div class="user-profile">
                         <img src="../images/feedback.png">
                         <div>
                             <p>Give Feedback</p>
                             <a href="#">Help us to improve</a>
                         </div>
-                    </div>
-                    <hr>
+                    </div> -->
+                    
                     <div class="settings-links">
                         <img src="../images/setting.png" class="settings-icon">
                         <a href="setting.php">Settings & Privacy <img src="../images/arrow.png" width="10px"></a>
                     </div>
-                    <div class="settings-links">
+                    <!-- <div class="settings-links">
                         <img src="../images/help.png" class="settings-icon">
                         <a href="#">Help & Support <img src="../images/arrow.png" width="10px"></a>
-                    </div>
-                    <div class="settings-links">
+                    </div> -->
+                    <!-- <div class="settings-links">
                         <img src="../images/display.png" class="settings-icon">
                         <a href="#">Display & Accessibility <img src="../images/arrow.png" width="10px"></a>
-                    </div>
+                    </div> -->
                     <div class="settings-links">
                         <img src="../images/logout.png" class="settings-icon">
                         <a href="logout.php">Logout <img src="../images/arrow.png" width="10px"></a>

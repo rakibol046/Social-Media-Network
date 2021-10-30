@@ -2,7 +2,7 @@
         <!--profile page---------->
 
         <div class="profile-container">
-    <img src="../images/cover.png" class="cover-img">
+    <!-- <img src="../images/cover.png" class="cover-img"> -->
 
 <div class="profile-details">
     <div class="pd-left">

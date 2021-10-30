@@ -12,12 +12,10 @@ session_start();
 // $result = mysqli_query($db, $sql) ;
 
 
-$result = mysqli_query($db, "SELECT  userinfo.user_photo,userinfo.username, friends.friends_id 
-                            FROM friends
-                            INNER JOIN userinfo
-                            ON friends.friends_id=userinfo.user_id
-                            WHERE friends.user_id = '$userId' AND username LIKE '%{$search_value}%'
-                            ORDER BY RAND();");
+            $subQuery = "SELECT friends_id FROM friends WHERE user_id='$userId'";
+             $result = mysqli_query($db, "SELECT user_id,username, user_photo FROM userinfo
+             WHERE user_id!= '$userId' AND user_id NOT IN ($subQuery) AND username LIKE '%{$search_value}%'
+            ");
 
 if(mysqli_num_rows($result) > 0 ){
 
@@ -28,7 +26,7 @@ if(mysqli_num_rows($result) > 0 ){
                                     <div class='pd-row'>
                                         <img src='../uploads/{$row["user_photo"]}' class='pd-image'>
                                         <div>
-                                        <a href='friends-profile.php?id={$row["friends_id"]}'> <h3> {$row["username"]} </h3></a>
+                                        <a href='public-profile.php?id={$row["user_id"]}'> <h3> {$row["username"]} </h3></a>
                                             
                             
                                         </div>
@@ -38,8 +36,8 @@ if(mysqli_num_rows($result) > 0 ){
                                 </div>
                                  <div class='pd-right'>
                                      
-                                     <a href='friends-profile.php?id={$row["friends_id"]}'>Profile</a>
-                                      <a >Message</a>
+                                 <a href='public-profile.php?id={$row["user_id"]}'>See Profile</a>
+                                 <a href='add-friend-action.php?id={$row["user_id"]} '>Add Friend</a>
                                      
                             
                                  </div>

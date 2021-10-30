@@ -39,7 +39,7 @@
             WHERE user_id = '$userid'");
 
             if($result==true){
-              header("location:setting.php");
+              header("location:setting.php?message=Updated");
 
             }
             // else{
@@ -55,7 +55,7 @@
         WHERE user_id = '$userid'");
 
         if($rresult==true){
-          header("location:setting.php");
+          header("location:setting.php?message=Updated");
         
         }
         

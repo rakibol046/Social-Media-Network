@@ -1,6 +1,13 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 require "db.php";
+$wrong="";
+$updated="";
+$message="";
+$wrong= $_GET["wrong"];
+$updated= $_GET["updated"];
+$message= $_GET["message"];
+
 session_start();
     if(isset($_SESSION['userid'])){
 
@@ -46,8 +53,8 @@ session_start();
       <?php require "navigation-bar.php"; ?>
      <div class="container">
         <div class="row pt-3">
-          <div class="col-3 p-3"> <?php require "left-sidebar.php"; ?> </div>
-          <div class="col-9"> <?php require "setting-content.php"; ?> </div>
+        <div class="col-1"> </div>
+          <div class="col-10"> <?php require "setting-content.php"; ?> </div>
          
         </div>
       </div>

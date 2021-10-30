@@ -59,6 +59,17 @@ session_start();
                     <h1 class="text-primary m-3">Add Friends</h1>
                 </div>
                 <hr>
+
+                <div class="search ">
+                    <div class="form">
+                        <div class="input-group">
+                        <input type="text" class="form-control w-50" id="search" placeholder="Search Friends">
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
                 <div id="data">
                     <ul class="list-group">
                     <?php 
@@ -66,8 +77,10 @@ session_start();
                         if(isset($_SESSION['userid'])){
                     
                             $userId=$_SESSION['userid'];
-                          
-                            $result = mysqli_query($db, "select username, user_photo from userinfo");
+                            $subQuery = "SELECT friends_id FROM friends WHERE user_id='$userId'";
+                            $result = mysqli_query($db, "SELECT user_id,username, user_photo FROM userinfo
+                            WHERE user_id!= '$userId' AND user_id NOT IN ($subQuery)
+                            ");
                           
                             while($row = mysqli_fetch_assoc($result)){
                                 echo "<div class='profile-details'>
@@ -75,7 +88,7 @@ session_start();
                                     <div class='pd-row'>
                                         <img src='../uploads/{$row["user_photo"]}' class='pd-image'>
                                         <div>
-                                            <h3> {$row["username"]} </a> </h3>
+                                        <a href='public-profile.php?id={$row["user_id"]}'> <h3> {$row["username"]} </h3></a>
                                             
                             
                                         </div>
@@ -85,8 +98,8 @@ session_start();
                                 </div>
                                  <div class='pd-right'>
                                      
-                                     <button type='button'><img src='../images/add-friends.png'>Friend</button>
-                                      <button type='button'><img src='message.png'>Message</button>
+                                 <a href='public-profile.php?id={$row["user_id"]}'>See Profile</a>
+                                 <a href='add-friend-action.php?id={$row["user_id"]} '>Add Friend</a>
                                      
                             
                                  </div>
@@ -116,7 +129,7 @@ session_start();
             $("#search").on("keyup",function(){
             var search_term = $(this).val();
             $.ajax({
-                url: "search-friends.php",
+                url: "add-friend-search.php",
                 type: "POST",
                 data : {search:search_term },
                 success: function(data) {

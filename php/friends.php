@@ -63,7 +63,7 @@ session_start();
                     <div class="form">
                         <div class="input-group">
                         <input type="text" class="form-control w-50" id="search" placeholder="Search Friends">
-                        <button type="" class="btn bg-primary text-white " >Search</button>
+                       
                         </div>
                     </div>
                 </div>
@@ -76,15 +76,21 @@ session_start();
                     
                             $userId=$_SESSION['userid'];
                           
-                            $result = mysqli_query($db, "select username, user_photo from userinfo");
-                          
+                            $result = mysqli_query($db, "SELECT  userinfo.user_photo,userinfo.username, friends.friends_id 
+                            FROM friends
+                            INNER JOIN userinfo
+                            ON friends.friends_id=userinfo.user_id
+                            WHERE friends.user_id = '$userId'
+                            ORDER BY RAND();");
+
+                            
                             while($row = mysqli_fetch_assoc($result)){
                                 echo "<div class='profile-details'>
                                 <div class='pd-left'>
                                     <div class='pd-row'>
                                         <img src='../uploads/{$row["user_photo"]}' class='pd-image'>
                                         <div>
-                                            <h3> {$row["username"]} </a> </h3>
+                                        <a href='friends-profile.php?id={$row["friends_id"]}'> <h3> {$row["username"]} </h3></a>
                                             
                             
                                         </div>
@@ -94,8 +100,8 @@ session_start();
                                 </div>
                                  <div class='pd-right'>
                                      
-                                     <button type='button'><img src='../uploads/{$row["user_photo"]}'>Profile</button>
-                                      <button type='button'><img src='message.png'>Message</button>
+                                     <a href='friends-profile.php?id={$row["friends_id"]}'>Profile</a>
+                                      <a >Message</a>
                                      
                             
                                  </div>

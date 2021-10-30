@@ -61,10 +61,11 @@ if(isset($_POST['login-submit'])) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/nav_style.css">
-    <title>Document</title>
+    <title>Social Media</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
       body {
+        
         background-image: url("../photo/cover.png") ;
         background-repeat: no-repeat;
   background-size: cover;
@@ -79,7 +80,7 @@ if(isset($_POST['login-submit'])) {
 
   
       form{
-        /* box-shadow: 0px 30px 129px 0 #8d0000;; */
+        /* box-shadow: 0px 30px 129px 0 #8d0000; */
         background-color: white;
         background: rgba(0, 0, 0, 0.5);
         border-radius: 10px;
@@ -87,6 +88,7 @@ if(isset($_POST['login-submit'])) {
         width: 340px;
         margin: 50px auto;
         font-size: 15px;
+        /* border: 2px solid rgb(204,204,204); */
 
 
       }
@@ -97,6 +99,7 @@ if(isset($_POST['login-submit'])) {
   width: 100px;
   background: rgba(255,255,255, 0.8);
   border-radius: 50%;
+  z-index: 10;
       }
 
       .login-form form .custom-form {
