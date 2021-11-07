@@ -10,7 +10,7 @@
             <img src="../uploads/<?php echo $userPhoto ?> " class="pd-image">
             <div>
                 <h3><?php echo $userName ?> </h3>
-                <p>120 Friends-20 mutual</p>
+                <p><?php echo $numberOfFriends?> Friends</p>
                 <img src="../images/member-1.png">
                  <img src="../images/member-2.png">
                   <img src="../images/member-3.png">
