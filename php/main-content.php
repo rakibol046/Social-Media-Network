@@ -78,9 +78,7 @@
      </div>
 
 
-     <div class='post-profile-icon'>
-     <img src='../images/profile-pic.png'>
-     </div>
+     
 
    </div>
    

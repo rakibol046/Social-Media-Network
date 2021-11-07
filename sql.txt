@@ -1,6 +1,6 @@
 CREATE TABLE userinfo(
     user_id int NOT NULL AUTO_INCREMENT,
-    user_name varchar(30),
+    username varchar(30),
     email varchar(30),
 	password varchar(30),
 	gender varchar(10),

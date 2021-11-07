@@ -20,7 +20,7 @@ require "db.php";
             <!-- <a href="#">Hide Chat</a> -->
         </div>
         <?php
-            $result = mysqli_query($db, "select username, user_photo from userinfo WHERE user_id!=$userId ORDER BY RAND() LIMIT 8");
+            $result = mysqli_query($db, "select userinfo.username, userinfo.user_photo from userinfo inner join friends on userinfo.user_id=friends.friends_id and friends.user_id=$userId WHERE userinfo.user_id!=$userId ORDER BY RAND() LIMIT 8");
                             
             while($row = mysqli_fetch_assoc($result)){
                 echo "<div class='online-list'>

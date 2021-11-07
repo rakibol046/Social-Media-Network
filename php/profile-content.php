@@ -43,10 +43,11 @@
             <ul>
                 <li><img src="../images/profile-job.png"><?php echo $profession?></li>
                 <li><img src="../images/profile-study.png"><?php echo $college?></li>
-                 <li><img src="../images/profile-location.png"><?php echo $email?></li>
-                 <li><img src="../images/profile-location.png"><?php echo $address?></li>
+                 <li><img src="../images/email.png" style="width: 20px;margin-left: 4px;"><?php echo $email?></li>
                  <li><img src="../images/profile-location.png"><?php echo $gender?></li>
-                 <li><img src="../images/profile-location.png"><?php echo $religion?></li>
+                 <li><img src="../images/gender.png" style="width: 20px;margin-left: 4px;"><?php echo $address?></li>
+                 
+                 <li><img src="../images/religion.png" style="width: 20px;margin-left: 4px;"><?php echo $religion?></li>
             </ul>
 
         </div>
@@ -176,7 +177,7 @@
 
      <div class='post-profile-icon'>
      <button id='uptade-btn' class='btn btn-primary  mx-3  mt-2'>Update</button>
-        <button id='delete-btn'  class='btn btn-danger mt-2'>Delete</button>
+     <a href='post-delete.php?postid={$postData["post_id"]}' style='text-decoration: none; color:white;'> <button id='delete-btn'  class='btn btn-danger mt-2'>Delete</button></a>
      </div>
 
    </div>

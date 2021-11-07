@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 require "db.php";
 session_start();
     if(isset($_SESSION['userid'])){
@@ -39,7 +39,7 @@ session_start();
         <div class="row pt-3">
           <div class="col-3 p-3"> <?php require "left-sidebar.php"; ?> </div>
           <div class="col-6"> <?php require "main-content.php"; ?> </div>
-          <div class="col-3  p-3"> <?php require "right-sidebar.php"; ?> </div>
+          <div class="col-3 "> <?php require "right-sidebar.php"; ?> </div>
         </div>
       </div>
       <script>
