@@ -120,13 +120,14 @@ nav {
 .left-sidebar {
     width: 20%;
     position: fixed;
-    height: 600px;
+    height: 660px;
     /* top: 70px;
     align-self: flex-start; */
     /* background: var(--bg-color);
     padding: 20px;
     border-radius: 4px;
     color: #626262; */
+    background: white;
 }
 
 .right-sidebar {
@@ -138,6 +139,7 @@ nav {
     padding: 20px;
     border-radius: 4px;
     color: #626262;
+    height: 660px;
 }
 
 
@@ -150,9 +152,12 @@ nav {
     text-decoration: none;
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 4px;
     color: #626262;
     /* width: fit-content; */
+    background-color: white;
+    padding: 20px;
+    /* width: 192px; */
 }
 
 .imp-links a img {

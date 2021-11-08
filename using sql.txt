@@ -29,3 +29,11 @@ FROM friends
 LEFT JOIN userinfo
 ON friends.friends_id=userinfo.user_id
 ORDER BY RAND();");
+
+
+
+
+
+
+INSERT INTO `userinfo` (`user_id`, `username`, `email`, `password`, `gender`, `user_photo`, `address`, `profession`, `college`, `religion`, `relationship`, `verify`) VALUES ('6', 'Sourav', 'sourav@gmail.com', '123', 'Male', 'profile.png', 'Cumilla', 'Teacher', 'Cumilla University', 'hindu', NULL, '1'),
+('7', 'Kabila', 'kabila@gmail.com', '123', 'Male', 'profile.png', 'Cumilla', 'Student', 'Cumilla University', 'Christianity', NULL, '1'), ('8', 'Nirob', 'nirob@gmail.com', '123', 'Male', 'profile.png', 'Madaripur', 'Student', 'BUBT', 'Islam', NULL, '1'),('9', 'Fahmida Akter', 'kabila@gmail.com', '123', 'Female', 'profile.png', 'Cumilla', 'Student', 'Dhaka University', 'hindu', NULL, '1');

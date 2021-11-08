@@ -7,9 +7,9 @@
 <div class="profile-details">
     <div class="pd-left">
         <div class="pd-row">
-            <img src="../uploads/<?php echo $userPhoto ?> " class="pd-image">
+            <img src="../uploads/<?php echo $friendPhoto ?> " class="pd-image">
             <div>
-                <h3><?php echo $userName ?> </h3>
+                <h3><?php echo $friendName ?> </h3>
                 <p>120 Friends</p>
                 <img src="../images/member-1.png">
                  <img src="../images/member-2.png">

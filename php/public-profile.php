@@ -4,15 +4,23 @@ require "db.php";
 session_start();
     if(isset($_SESSION['userid'])){
 
+      $mainUser = $_SESSION['userid'];
+      $rresult = mysqli_query($db, "select * from userinfo where user_id='$mainUser'");
+      $rrow = mysqli_fetch_assoc($rresult);
+      $userName = $rrow["username"];
+      $userPhoto = $rrow["user_photo"];
+
+
+
         $userId=$_GET['id'];
       
         $result = mysqli_query($db, "select * from userinfo where user_id='$userId'");
       
         $row = mysqli_fetch_assoc($result);
-        $userName = $row["username"];
+        $friendName = $row["username"];
         $email = $row["email"];
         $password = $row["password"];
-        $userPhoto = $row["user_photo"];
+        $friendPhoto = $row["user_photo"];
         $profession = $row["profession"];
         $gender = $row["gender"];
         $college = $row["college"];
@@ -36,7 +44,7 @@ session_start();
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-      <title>Socialbook</title>
+      <title>Connector</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <link rel="stylesheet" href="../style/home2-style.css">
       <link rel="stylesheet" href="../style/profile-content-style.css">

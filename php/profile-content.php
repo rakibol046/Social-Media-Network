@@ -176,7 +176,7 @@
 
 
      <div class='post-profile-icon'>
-     <button id='uptade-btn' class='btn btn-primary  mx-3  mt-2'>Update</button>
+     <a href='post-update.php?postid={$postData["post_id"]}&updatemessage={$postData["post_text"]}' style='text-decoration: none; margin-right:5px; color:white;'> <button id='delete-btn'  class='btn btn-primary mt-2'>Update</button></a>
      <a href='post-delete.php?postid={$postData["post_id"]}' style='text-decoration: none; color:white;'> <button id='delete-btn'  class='btn btn-danger mt-2'>Delete</button></a>
      </div>
 

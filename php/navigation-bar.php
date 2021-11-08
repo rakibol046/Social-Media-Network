@@ -1,20 +1,16 @@
 
 		<nav>
 			<div class="nav-left"> 
-			<a href="home2.php"><img src="../images/logo.png" class="logo"> </a>
-            <!-- <a herf="#"> SOCIAL BOOK</a> -->
-				<ul>
-					<li><img src="../images/notification.png"></li>
-					<li><img src="../images/inbox.png"></li>
-					<li><img src="../images/video.png"></li>
-				</ul>
+			<!-- <a href="home2.php"><img src="../images/logo.png" class="logo"> </a> -->
+            <a href="home2.php" style="font-size: 32px; color: white; text-decoration: none;"> <b style="color: red;">C</b>ONNECTOR</a>
+				
 			</div>
 			<div class="nav-right">
-				<div class="search-box">
+				<!-- <div class="search-box">
 					<img src="../images/search.png">
 					<input type="text" placeholder="Search">
-				</div>
-
+				</div> -->
+                <a href="profile-page.php" style="font-size: 20px; border-right:2px solid white; border-left:2px solid white;border-radius: 30px; padding:0px 5px 0px 5px; color: white; text-decoration: none;"> <?php echo $userName ?></a>
 				<div class="nav-user-icon online" onclick="settingsMenuToggle()">
 					<img src="../uploads/<?php echo $userPhoto ?>">
 
