@@ -11,10 +11,10 @@
             <div>
                 <h3><?php echo $userName ?> </h3>
                 <p><?php echo $numberOfFriends?> Friends</p>
-                <img src="../images/member-1.png">
+                <!-- <img src="../images/member-1.png">
                  <img src="../images/member-2.png">
                   <img src="../images/member-3.png">
-                   <img src="../images/member-4.png">
+                   <img src="../images/member-4.png"> -->
 
             </div>
 
@@ -81,10 +81,10 @@
             
           
            <div class="friends-box">
-            <div><img src="../images/member-1.png"><p>Nadia</p></div>
+            <!-- <div><img src="../images/member-1.png"><p>Nadia</p></div>
             <div><img src="../images/member-2.png"><p>John</p></div>
             <div><img src="../images/member-3.png"><p>Alina</p></div>
-            <div><img src="../images/member-4.png"><p>Mota</p></div>
+            <div><img src="../images/member-4.png"><p>Mota</p></div> -->
 
         </div>
         </div>

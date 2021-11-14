@@ -10,11 +10,8 @@
             <img src="../uploads/<?php echo $friendPhoto ?> " class="pd-image">
             <div>
                 <h3><?php echo $friendName ?> </h3>
-                <p>120 Friends</p>
-                <img src="../images/member-1.png">
-                 <img src="../images/member-2.png">
-                  <img src="../images/member-3.png">
-                   <img src="../images/member-4.png">
+                <p><?php echo $numberOfFriends ?> Friends</p>
+               
 
             </div>
 

@@ -24,6 +24,8 @@ session_start();
         $college = $row["college"];
         $religion = $row["religion"];
         $address = $row["address"];
+
+        $numberOfFriends = mysqli_num_rows(mysqli_query($db, "SELECT * FROM friends WHERE user_id='$userId'"));
         
       
       
